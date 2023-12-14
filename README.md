@@ -22,9 +22,9 @@ from diagrams.aws.database import ElastiCache, RDS
 from diagrams.aws.network import ELB
 from diagrams.aws.network import Route53
 
-with Diagram("Clustered Web Services", show=False):
-    dns = Route53("dns")
-    lb = ELB("lb")
+    with Diagram("Clustered Web Services", show=False):
+        dns = Route53("dns")
+        lb = ELB("lb")
 
     with Cluster("Services"):
         svc_group = [ECS("web1"),
